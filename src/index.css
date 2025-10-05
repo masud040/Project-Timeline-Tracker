@@ -1,1 +1,61 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #f44236;
+  --color-primary-hover: #d93b30;
+  --color-bg: #f9fafb;
+  --color-text-dark: #1e1e1e;
+  --color-text-light: #555555;
+  --color-card-bg: #ffffff;
+  --color-card-border: #e5e5e5;
+}
+
+@layer components {
+  /* Buttons */
+  .btn {
+    @apply inline-block px-5 py-2.5 rounded-lg font-medium 
+           bg-primary text-white transition duration-300 
+           ease-in-out shadow-sm hover:bg-primary-hover 
+           hover:shadow-md active:scale-95;
+  }
+
+  .btn-outline {
+    @apply inline-block px-5 py-2.5 rounded-lg font-medium 
+           border border-primary text-primary transition duration-300
+           ease-in-out hover:bg-primary hover:text-white hover:shadow-md;
+  }
+
+  /* Card container */
+  .card {
+    @apply bg-card-bg border border-card-border rounded-xl 
+           p-8 shadow-md transition duration-300;
+  }
+
+  /* Typography */
+  .text-title {
+    @apply text-text-dark font-bold;
+  }
+  .text-sub {
+    @apply text-text-light;
+  }
+
+  /* Section heading */
+  .section-heading {
+    @apply text-4xl md:text-5xl lg:text-[48px] font-bold text-text-dark mb-6;
+  }
+
+  .section-description {
+    @apply text-text-light text-base md:text-lg mb-6;
+  }
+
+  /* Form input */
+  .form-input {
+    @apply w-full px-4 py-2 rounded-lg border border-card-border 
+           text-text-dark focus:outline-none focus:ring-2 focus:ring-primary 
+           focus:border-primary transition duration-300 mb-4;
+  }
+
+  .form-label {
+    @apply block text-text-dark font-medium mb-1;
+  }
+}
