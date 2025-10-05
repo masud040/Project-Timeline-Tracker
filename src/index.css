@@ -40,8 +40,12 @@
   }
 
   /* Section heading */
+
+  .section-header {
+    @apply pb-3 md:pb-6;
+  }
   .section-heading {
-    @apply text-4xl md:text-5xl lg:text-[48px] font-bold text-text-dark mb-6;
+    @apply text-4xl md:text-5xl lg:text-[48px] font-bold text-text-dark mb-3;
   }
 
   .section-description {
